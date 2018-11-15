@@ -9,4 +9,8 @@ echo "Installing Button-specific applications"
 
 brew cask install 1password
 brew cask install 1password-cli
+
+# Productivity
+
+brew cask install omnifocus
 set -e
