@@ -2,7 +2,7 @@ echo
 echo "Configuring bash with bash-it"
 brew install grc
 brew install coreutils
-brew install rbenv
+brew install asdf
 brew install watch
 cp files/dircolors.ansi-dark ~/.dircolors
 cp files/.inputrc ~/.inputrc
@@ -14,8 +14,9 @@ cp files/bobby_pivotal/bobby_pivotal.theme.bash ~/.bash_it/themes/bobby/bobby.th
 source ~/.bash_profile
 bash-it enable completion git
 bash-it enable plugin ssh
-bash-it enable plugin rbenv
 bash-it enable completion ssh
+grep -q -F 'source /usr/local/opt/asdf/asdf.sh' ~/.bash_it/lib/custom.bash || echo 'source /usr/local/opt/asdf/asdf.sh' >> ~/.bash_it/lib/custom.bash
+source /usr/local/opt/asdf/asdf.sh
 
 echo
 echo "Configuring direnv with bash-it"
